@@ -16,4 +16,20 @@ class User
     # create a new tweet
     tweet = Tweet.new(message, self)
   end
+
+  def like_tweet(tweet)
+    Like.new(self, tweet)
+  end
+
+  def likes
+    Like.all.select do |like|
+      like.user == self
+    end
+  end
+
+  def liked_tweets
+    likes.map do |like|
+      like.tweet
+    end
+  end
 end
