@@ -63,6 +63,5 @@ def run
   end
 end
 
-Pry.start
 # and display a list of books, including title, author and description, that are found
 run
