@@ -1,11 +1,13 @@
 class DynamicModel
   attr_reader :id
 
-  def initialize(attributes)
-    self.class.column_names.map do |column_name|
-      self.class.send(:attr_accessor, column_name.to_sym)
+  def self.inherited(childclass)
+    childclass.column_names.each do |column_name|
+      attr_accessor column_name.to_sym
     end
+  end
 
+  def initialize(attributes)
     @id = nil
     self.send(:mass_assign_attributes, attributes)
   end
