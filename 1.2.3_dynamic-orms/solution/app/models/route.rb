@@ -1,0 +1,2 @@
+class Route < DynamicModel
+end
