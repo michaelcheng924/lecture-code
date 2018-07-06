@@ -1,0 +1,18 @@
+<% if(@user_id) %>
+  <form action="/logout" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>Log out</button>
+  </form>
+<% end %>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <a href="/books/<%= book.id %>"><%= book.title %></a>
+      <br>
+      <a href="/authors/<%= book.author_id %>"><%= book.author.name %></a>
+      <br>
+      <%= book.snippet %>
+    </li>
+  <% end %>
+</ul>
