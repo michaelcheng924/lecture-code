@@ -1,24 +1,17 @@
-class ApplicationController < Sinatra::Base
-
-  set :views, "app/views"
-  set :method_override, true
-
-  get "/" do
-    erb :home
-  end
-
+class BooksController < ApplicationController
+  
   get "/books" do
     @books = Book.all
-    erb :index
+    erb :"books/index"
   end
 
   get "/books/new" do
-    erb :new
+    erb :"books/new"
   end
 
   get "/books/:id" do
     @book = Book.find(params["id"])
-    erb :show
+    erb :"books/show"
   end
 
   post "/books" do
@@ -28,7 +21,7 @@ class ApplicationController < Sinatra::Base
 
   get "/books/:id/edit" do
     @book = Book.find(params["id"])
-    erb :edit
+    erb :"/books/edit"
   end
 
   patch "/books/:id" do
@@ -37,4 +30,9 @@ class ApplicationController < Sinatra::Base
     redirect "/books/#{book.id}"
   end
 
+  delete "/books/:id" do
+    Book.find(params["id"]).destroy
+    redirect "/books"
+  end
+  
 end

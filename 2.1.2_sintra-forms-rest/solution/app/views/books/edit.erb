@@ -1,0 +1,8 @@
+<form action="/books/<%= @book.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="title">Title</label>
+  <input name="title" placeholder="Title" value="<%= @book.title %>" />
+  <label for="snippet">Snippet</label>
+  <input name="snippet" placeholder="Snippet" value="<%= @book.snippet %>" />
+  <button>Update</button>
+</form>
