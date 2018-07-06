@@ -44,3 +44,15 @@
   <%= f.text_field :era, placeholder: "era" %>
   <%= f.submit "create dino" %>
 <% end %>
+
+<h3>Form With</h3>
+<%# Form with is the newest that combines "Form tag" and "Form for", which will eventually be deprecated %>
+
+<%= form_with model: @dinosaur do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :number_of_teeth, placeholder: "number_of_teeth" %>
+  <%= form.text_field :species, placeholder: "species" %>
+  <%= form.text_field :diet, placeholder: "diet" %>
+  <%= form.text_field :era, placeholder: "era" %>
+  <%= form.submit "create dino" %>
+<% end %>
