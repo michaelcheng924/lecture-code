@@ -1,7 +1,5 @@
-module Adapter
-
-  class GoogleBooks
-
+module GoogleBooks
+  class Adapter
     attr_reader :term
 
     def initialize(term)
@@ -19,7 +17,5 @@ module Adapter
         }
       end
     end
-
   end
-
 end
