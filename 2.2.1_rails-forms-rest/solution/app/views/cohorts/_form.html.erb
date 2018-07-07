@@ -1,0 +1,10 @@
+<% if(flash[:errors]) %>
+  <% flash[:errors].each do |error| %>
+    <div><%= error %></div>
+  <% end %>
+<% end %>
+
+<%= form_with model: @cohort do |form| %>
+  <%= form.text_field :name %>
+  <%= form.submit %>
+<% end %>

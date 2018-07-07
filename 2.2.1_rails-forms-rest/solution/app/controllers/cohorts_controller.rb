@@ -15,9 +15,10 @@ class CohortsController < ApplicationController
     @cohort = Cohort.new(cohort_params)
 
     if @cohort.save
-      redirect_to '/cohorts'
+      redirect_to @cohort
     else
-      render :new
+      flash[:errors] = @cohort.errors.full_messages
+      redirect_to new_cohort_path
     end
   end
 
@@ -29,14 +30,17 @@ class CohortsController < ApplicationController
     @cohort = Cohort.find(params[:id])
 
     if @cohort.update(cohort_params)
-      redirect_to "/cohorts/#{@cohort.id}"
+      redirect_to @cohort
     else
-      render :edit
+      flash[:errors] = @cohort.errors.full_messages
+      redirect_to edit_cohort_path
     end
   end
 
-  def delete
+  def destroy
     Cohort.destroy(params[:id])
+
+    redirect_to cohorts_path
   end
 
   private

@@ -1,2 +1,6 @@
 <h1><%= @cohort.name %></h1>
 <a href="/cohorts/<%= @cohort.id %>/edit">Edit</a>
+
+<%= form_with model: @cohort, method: 'delete' do |form| %>
+  <%= form.submit 'Delete' %>
+<% end %>
