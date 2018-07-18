@@ -6,18 +6,19 @@ Code associated to the `Scope and closures` lecture
 
 ### Variables scope
 * Redefine key terms (scope resolution, lexical scope and execution context)
-* Define scope resolution (buckets and marbles)
-* Lexical scope
-* JS scopes: global, functions and blocks (`{}` as a function body, block and object literal)
-* variables properties (scope, definition rules, 'hoisting' and debugger quirks)
+* `Lexical Scope(s)` (buckets and marbles)
+* Relationship between `Lexical Scope` and `Scope Resolution`
+* JS scopes: `Global`, `Function` and `Block` (p.s. `{}` can be a function body, block or object literal)
+* A tour of JS variables
+* Variables properties (scope, definition rules, 'hoisting' and debugger quirks)
 * `var` variable overview
 * `let` overview
 * `cost` overview
 * Comparing 'hoisting' for `var` vs `let`/`const`
 
 ### Closures
-* Review how a function can return a value
-* Functions that return functions
+* First class functions
+* Functions that return functions (like any other value)
 * Closures as the natural outcome of first class functions and Lexical scope
 * Debugger and closures
 
@@ -26,3 +27,5 @@ Code associated to the `Scope and closures` lecture
 > **Lexical scope**: Lexical scope means that scope is defined by author-time decisions of where functions are declared. From https://github.com/getify/You-Dont-Know-JS
 
 > **Closure**: A closure is the combination of a function and the lexical environment within which that function was declared. From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+> **Closure** definition by `@getify`: Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.
