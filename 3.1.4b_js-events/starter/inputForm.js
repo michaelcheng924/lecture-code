@@ -1,12 +1,10 @@
-const form = document.getElementById('greeting-form')
-console.log(form)
-const greeting = document.getElementById('greeting-field')
-const name = document.getElementById('name-field')
+const nameElement  = document.getElementById("greeting-field");
+const greetingElement = document.getElementById("name-field");
+const formElement = document.getElementById("greeting-form");
 
-form.addEventListener('click',function(event) {
+formElement.addEventListener( 'submit', event => {
     event.preventDefault()
-
-    console.log(`${greeting.value} ${name.value}`)
-    greeting.value = ''
-    name.value = ''
-})
+    const greetingMsg = greetingElement.value
+    const name = nameElement.value
+    console.log(`${name} says ${greetingMsg}`)
+} )

@@ -2,15 +2,16 @@
 
 Code associated to the Browser Events lecture
 
-## Objectives
+## Outline
 
-* What are events, event listeners and event handlers
+* Why events?
+* What are events and event listeners
 * When and why to use event listeners
 * Event types
-* Event listeners as function references and as in-line functions
+* Event listeners as function references or in-line functions
 * Event bubbling and capturing
 * Synthesize knowledge of forms with event listeners
-* Delegate events using the `event.target`
+* Delegate events using the `event.target` (possibly during a part II)
 
 Resources:
 

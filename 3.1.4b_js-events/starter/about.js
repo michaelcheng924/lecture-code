@@ -10,7 +10,7 @@ var eventDescripters = [
   {
     id: "box-1",
     message:
-      "This morning we will learn about events, events listeners and events handlers"
+      "This morning we will learn about events and events listeners"
   },
   {
     id: "box-2",
@@ -23,7 +23,7 @@ var eventDescripters = [
   {
     id: "box-4",
     message:
-      "Write event listeners as --> --> stand-alone functions and in-line functions <-- <-- <-- p.s. Please no ()"
+      "Write event listeners as --> --> stand-alone functions or in-line functions <-- <-- <-- p.s. Please no ()"
   },
   {
     id: "box-5",
