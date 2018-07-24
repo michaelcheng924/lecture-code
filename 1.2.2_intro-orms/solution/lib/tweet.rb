@@ -39,4 +39,9 @@ class Tweet
       DB[:conn].execute(sql, @username, @message)
     end
   end
+
+  def self.create(props={})
+    new_tweet = Tweet.new(props)
+    new_tweet.save
+  end
 end
