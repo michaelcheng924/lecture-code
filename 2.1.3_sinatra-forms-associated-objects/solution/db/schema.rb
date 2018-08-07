@@ -10,31 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_05_151452) do
+ActiveRecord::Schema.define(version: 2018_04_04_202221) do
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
   end
 
   create_table "books", force: :cascade do |t|
-    t.string "name"
     t.integer "author_id"
-    t.index ["author_id"], name: "index_books_on_author_id"
-  end
-
-  create_table "likes", force: :cascade do |t|
-    t.integer "tweet_id"
-    t.integer "user_id"
-    t.index ["tweet_id"], name: "index_likes_on_tweet_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
-  end
-
-  create_table "tweets", force: :cascade do |t|
-    t.string "text"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
+    t.string "snippet"
   end
 
 end
